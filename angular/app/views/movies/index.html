@@ -1,0 +1,20 @@
+
+<div class="row marketing">
+  <a class="btn btn-primary" ui-sref="newMovie">New</a>
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <th>Actions</th>
+    </tr>
+    <tr ng-repeat="movie in movies">
+      <td>{{ movie.title }}</td>
+      <td>
+        <div class="btn-group">
+          <a class="btn btn-primary" ui-sref="showMovie({id: movie.id})">View</a>
+          <a class="btn btn-default" ui-sref="editMovie({id: movie.id})">Edit</a>
+          <a class="btn btn-danger"  ng-click="deleteMovie(movie)">Delete</a>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
